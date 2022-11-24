@@ -30,7 +30,7 @@
             "status":1,
             "quantity":2,
             "totalValue":10.20,
-            "PaymentType":2,
+            "paymentType":2,
             "image":"./ProdutosImagens/livros-sensacional-guia.jpg",
             "date":"30/01/2022"
         }],

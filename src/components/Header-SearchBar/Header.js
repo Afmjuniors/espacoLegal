@@ -13,11 +13,13 @@ function Header(props) {
         setInputName,
         productsNames,
         screen,
-        setScreen
+        setScreen,
+        isLogOn,
+        setIslogOn
     } = props
 
-    const [dummyInput, setDummyInput] = useState()
-    const [isLogOn, setIslogOn] = useState(false)
+
+
     
 
     const userS = localStorage.getItem("user")

@@ -10,12 +10,14 @@ function CartSide(props) {
         setScreen,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
-        handleClickProduct
+        handleClickProduct,
+        handleFinalizarCompra,
+        
     } = props
 
 
     let subTotal =( currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
-    
+
 
 
 

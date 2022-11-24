@@ -76,13 +76,10 @@ export const FormContainer = styled.div`
     color:${(props)=>props.isEmailValid?"black":"red"}
  }
  .password{
-    color:${(props)=>props.isPasswordValid2?"black":"red"}
+    color:${(props)=>props.isPasswordValid?"black":"red"}
 
  }
- .password2{
-    color:${(props)=>props.isPasswordValid2?"black":"red" }
 
- }
 
     
 
