@@ -6,12 +6,13 @@ import { formatter } from "../../uteis/formatterCurrency"
 import certificado from "../../assets/certificado.png"
 
 function Product(props) {
-    const {product,addToCart}=props
+    const {product,addToCart,handleFinalizarCompra}=props
 
     const dicontPrice =formatter.format(product.price * (1-(product.offPrice/100)))
 
 
     const [currImage, setCurrImage] = useState(0)
+
 
   
 
@@ -71,7 +72,7 @@ function Product(props) {
                     <div><img src={locationIcon} alt="location icon" /> <span>Rua dr juvenal dos santos 270, apto 104, luxemburgo bh-mg</span><span>30380-530</span></div>
                     {product.avalible?<p>Em estoque</p>:<p>ESGOTADO</p>}
                     <button onClick={()=>addToCart(product)}>Adicionar ao carrinho</button>
-                    <button>Comprar agora</button>
+                   
                     <div className="fav">
                     <input type="checkbox" name="favorito" /><label>Adicionar aos favoritos</label>
                     </div>

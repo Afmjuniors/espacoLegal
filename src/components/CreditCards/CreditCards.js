@@ -2,11 +2,14 @@ import { ContainerCard } from "./CreditCard.styled"
 import masterCard from "../../assets/masterCard.png"
 import visa from "../../assets/visa.png"
 import elo from "../../assets/elo.png"
+import { useState } from "react"
+import AddCreditCard from "./AddCreditCard"
 
 
 
 function CreditCards(props) {
     const {creditCards} = props
+    const [pageFlow,setPageFlow] =useState(2)
 
     const handleSwitch = (brand) => {
         switch (brand) {
@@ -26,8 +29,12 @@ function CreditCards(props) {
         <ContainerCard>
             <div className="header-cards">
                 <h1>Cartões de crédito</h1>
-                <p>adcionar novo cartão</p>
+                <p onClick={()=>setPageFlow(1)}>adcionar novo cartão</p>
             </div>
+            {
+                pageFlow===1 &&
+            <AddCreditCard setPageFlow={setPageFlow}/>
+            }
             <div className="cards-body">
 
                 {creditCards.map((creditCard) => {

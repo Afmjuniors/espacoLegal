@@ -25,6 +25,7 @@ function FormSignUp() {
     const handleSingUp = () => {
 
     }
+    
 
 
 
@@ -36,7 +37,7 @@ function FormSignUp() {
             handleSingUp()
         }
 
-        if (isEmailValid, isPasswordValid, isUsernameValid) {
+        if (isEmailValid && isPasswordValid && isUsernameValid) {
             setIsValid(true)
         } else {
             setIsValid(false)

@@ -20,9 +20,10 @@ display:flex;
         display:flex;
         justify-content:space-between;
         padding:2px 8px;
- 
         width:100%;
+        cursor: pointer;
         span{
+           
             img{
                 width:16px;
             }

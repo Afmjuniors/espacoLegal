@@ -9,11 +9,22 @@ function Cart(props) {
         addToCart,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
-        handleClickProduct } = props
+        handleClickProduct,
+        setCurrCart,
+        handleFinalizarCompra,
+         } = props
 
     let subTotal = (currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
     let priceFull = (currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)).toFixed(2)
     let quantitySum = (currCart.reduce((acc, product) => (product.quantity + acc), 0))
+
+
+    const handleFinalizaCompraCart = () =>{
+        currCart.length>0?
+        handleFinalizarCompra(): alert("Caarrinho Vazio")
+    }
+
+
 
 
     return (
@@ -23,7 +34,7 @@ function Cart(props) {
 
                     <h1>Carrinho de compras</h1>
                     <div className="subtitle">
-                        <span><img src={deleteIcon} alt="delete icon" /> Remover todos</span>
+                        <span onClick={()=>setCurrCart([])}><img src={deleteIcon} alt="delete icon" /> Remover todos</span>
                         <span>Preço</span>
 
                     </div>
@@ -77,7 +88,7 @@ function Cart(props) {
                         <hr/>
                         <p className="subtotal"><span>SubTotal:</span><span className="r-side">{formatter.format(subTotal)}</span></p>
                     </div>
-                    <button>Finalizar compra</button>
+                    <button onClick={handleFinalizaCompraCart}>Finalizar compra</button>
 
                 </div>
 

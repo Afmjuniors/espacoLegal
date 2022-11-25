@@ -9,7 +9,7 @@ export const formatter = new Intl.NumberFormat('pt-BR', {
 })
 
 const newArrayBestOff = [...products]
-export const arrayBestOff =  newArrayBestOff.sort((a , b)=>a.offPrice - b.offPrice)
+export const arrayBestOff =  newArrayBestOff.sort((a , b)=>b.offPrice - a.offPrice)
 arrayBestOff.splice(4,Number.MAX_VALUE)
 
 const newArrayBesEvaluation = [...products]

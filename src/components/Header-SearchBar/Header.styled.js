@@ -88,7 +88,11 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
 
 `
 
-export const DatalistWrapper = styled.div`
+export const DatalistWrapper = styled.datalist`
+.opts{
+   color:red;
+}
+
 
 `
 

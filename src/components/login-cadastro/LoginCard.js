@@ -28,12 +28,10 @@ function FormLogin(props) {
     const handleLogin = () => {
         setIsFirstRun(false)
         
-        const user = users.filter((user) => {
+        const user = users.find((user) => {
             setIsUserNameValid(false)
-            console.log("1");
 
             if (userName === user.username || userName === user.email) {
-                console.log("2");
                 setIsUserNameValid(true)
                 if (password === user.password) {
                    

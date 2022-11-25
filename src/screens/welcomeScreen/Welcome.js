@@ -4,6 +4,7 @@ import {arrayBestOff ,arrayBestEvaluatiob ,arrayMostBougth } from "../../uteis/f
 
 function Welcome(props) {
     const {handleClickProduct} =props
+
     return (
         <ContainerWealcome>
 
@@ -14,19 +15,22 @@ function Welcome(props) {
         
                 <div className="contaniners-destaques">
                     <h2>Produtos maiores promocoes</h2>
-               {arrayBestOff.map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
+               {arrayBestOff
+               .map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
                 
                 </div>
 
                 <div className="contaniners-destaques">
                     <h2>Produtos mais vendidos</h2>
-                    {arrayMostBougth.map((product) => <img  onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
+                    {arrayMostBougth
+                    .map((product) => <img  onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
 
                 
                 </div>
                 <div className="contaniners-destaques">
                     <h2>Produtos melhores avaliados</h2>
-                    {arrayBestEvaluatiob.map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
+                    {arrayBestEvaluatiob
+                    .map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
 
 
                 </div>
