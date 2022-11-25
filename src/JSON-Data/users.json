@@ -33,17 +33,27 @@
             "paymentType":2,
             "image":"./ProdutosImagens/livros-sensacional-guia.jpg",
             "date":"30/01/2022"
+        },
+        {
+            "id":"002",
+            "name": "Espaço : Abra e descubra",
+            "status":3,
+            "quantity":1,
+            "totalValue":46.60,
+            "paymentType":1,
+            "image":"./ProdutosImagens/livros-espaco.jpg",
+            "date":"31/01/2021"
         }],
         "creditCards":[{
             "choice": true,
             "validity":true,
-            "number":1234567890123456,
+            "number":"1234 5678 9012 3456",
             "brand":"Visa",
             "validityMounth":12,
             "validityYear":25,
             "cvc":123,
             "name":"Alexandre Machado",
-            "cpf": 12345678901
+            "cpf": "123.456.789-01"
         }],
         "favorites":["001","002"]
     }

@@ -17,6 +17,8 @@ const handleStaus = (status) => {
 
 function CardPurchase(props) {
     const {produtos,handleClickHistory} =props
+    console.log(produtos);
+
 
 
     
@@ -42,6 +44,7 @@ function CardPurchase(props) {
                                 <h4>{prod.name}</h4>
                                 <p>{prod.quantity} unidades</p>
                             </div>
+                          
 
                         </div>
                     </ContainerCard>

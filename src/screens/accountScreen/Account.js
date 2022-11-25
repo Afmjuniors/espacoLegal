@@ -34,14 +34,14 @@ function Account(props) {
 
         switch (flowPgae) {
             case "Pedidos":
-                return <CardPurchase produtos={user[0].purchasesHistoric } handleClickHistory={handleClickHistory}/>
+                return <CardPurchase produtos={user.purchasesHistoric } handleClickHistory={handleClickHistory}/>
             case "Cadastro":
-                return <Cadastro user={user[0]} />
+                return <Cadastro user={user} />
             case "Metodos de Pagamento":
-                return <CreditCards creditCards={user[0].creditCards} />
+                return <CreditCards creditCards={user.creditCards} />
             case "Favoritos":
                 return <FavCard 
-                favorites={ user[0].favorites} 
+                favorites={ user.favorites} 
                 products={products}
                 handleClickProduct={handleClickProduct} 
                 currCart={currCart}

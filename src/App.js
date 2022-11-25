@@ -22,7 +22,7 @@ function App() {
   const [product, setProduct] = useState({})
   const [isLogOn, setIslogOn] = useState(false)
   const [pageFlowApp, setPageFlowAPP] = useState(1)
-  const [user, setUser] = useState([])
+  const [user, setUser] = useState({})
 
 
 
@@ -43,7 +43,7 @@ function App() {
 
   const handleLocalUser = () => {
     let userString = localStorage.getItem("user")
-    userString || localStorage.setItem("user", JSON.stringify([]))
+    userString || localStorage.setItem("user", JSON.stringify({}))
     userString = localStorage.getItem("user")
     setUser(JSON.parse(userString))
   }
@@ -72,11 +72,8 @@ function App() {
   }
   const addQuantityToProductOnCart = (productToAddQuantity) => {
     const newCart = [...currCart]
-
     const productFound = newCart.find((product) => product.id === productToAddQuantity.id)
-
     productFound.quantity++
-
     setCurrCart(newCart)
     const currCartString = JSON.stringify(newCart)
     localStorage.setItem("currCart", currCartString)
@@ -108,26 +105,35 @@ function App() {
     let conf =false
     isLogOn ?  conf = window.confirm(`Finalizar a compra no valor de ${total}?`) :
       setScreen("login")
-
+      const localUserS = localStorage.getItem('user')
+      const localUser = JSON.parse(localUserS)
+    
 
       if(conf){
       const newProdutPur = currCart.map((item)=>{
         return {
           id:item.id,
           name: item.name,
-          status:3,
+          status:2,
           quantity:item.quantity,
           totalValue:item.priceDiscont*item.quantity,
           payment:1,
           image:item.image[0],
-          date:new Date.now
+          date:"12/12/2022"
         }
       })
-      const newHistory = [...newProdutPur, user.purchasesHistoric]
-      const newUser = {...user, purchasesHistoric:newHistory}
+      const newHistory = [...newProdutPur, ...localUser.purchasesHistoric]
+      console.log(newHistory);
+      
+      const newUser = {...localUser, purchasesHistoric:newHistory}
       setUser(newUser)
+      localStorage.setItem('user',JSON.stringify(newUser))
+      setCurrCart([])
+      localStorage.setItem("currCart",JSON.stringify([]))
+      setScreen('account')
         
       }
+     
 
   }
 
@@ -215,6 +221,7 @@ pageFlowApp===1?
           setScreen={setScreen}
           currCart={currCart}
           handleClickProduct={handleClickProduct}
+          handleFinalizarCompra={handleFinalizarCompra}
           
         />
       }

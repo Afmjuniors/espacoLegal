@@ -1,22 +1,25 @@
 import { useState } from "react"
 import { CartCardContainer, CartContainer } from "./Cart-side.styled";
+import addIcon from "../../assets/addIcon.svg"
+import subIcon from "../../assets/subtractIcon.svg"
+import deleteIcon from "../../assets/deleteIcon.svg"
 
 
 
 
 function CartSide(props) {
-    const { 
+    const {
         currCart,
         setScreen,
         addQuantityToProductOnCart,
         reduceQuantityToProductOnCart,
         handleClickProduct,
         handleFinalizarCompra,
-        
+
     } = props
 
 
-    let subTotal =( currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
+    let subTotal = (currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
 
 
 
@@ -26,36 +29,49 @@ function CartSide(props) {
 
 
         <CartContainer size={currCart.length}>
-           
-              <div>
-                <p>SubTotal</p>
-                <p>R${subTotal}</p>
-                <button onClick={()=>setScreen("cart")}>ir para carrinho</button>
-            </div>
 
+            <div>
+                <p>SubTotal</p>
+                <span>R${subTotal}</span>
+                <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
+               
+            </div>
+            <hr />
             {currCart
                 .map((product) => {
-                   
-                
-                    return (
-                        <CartCardContainer key={product.id}>
 
-                            <img onClick={()=>handleClickProduct(product)} src={product.image[0]} alt={product.altImage} />
+
+                    return (
+                        <>
+                        
+                        <CartCardContainer key={product.id}>                          
+
+                            <img className="image-prod" onClick={() => handleClickProduct(product)} src={product.image[0]} alt={product.altImage} />
 
                             <p>R${product.priceDiscont.toFixed(2)}</p>
                             <div>
-                                <button onClick={()=>reduceQuantityToProductOnCart(product)}>-</button>
+                                <img onClick={() => reduceQuantityToProductOnCart(product)} src={subIcon} alt="SubIcon" />
                                 <p>{product.quantity}</p>
-                                <button onClick={()=>addQuantityToProductOnCart(product)}>+</button>
+                                <img onClick={() => addQuantityToProductOnCart(product)} src={addIcon} alt="addIcon" />
                             </div>
-                            <button onClick={()=>reduceQuantityToProductOnCart(product,0)}>Erase</button>
+                            <img className="lixeira" onClick={() => reduceQuantityToProductOnCart(product,0)} src={deleteIcon} alt="Delete Icon" />
 
-                        </CartCardContainer>)
+                      </CartCardContainer>
+                        <hr />
+                        </>
+                        )
+                        
 
                 })
 
             }
-          
+             
+            <div>
+                <p>SubTotal</p>
+                <span>R${subTotal}</span>
+                <button onClick={() => setScreen('cart')}>ir para carrinho</button>
+            </div>
+
 
 
 

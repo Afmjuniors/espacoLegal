@@ -2,6 +2,8 @@ import React from 'react'
 import { CardContainer } from './Card.styled'
 import saleImg from '../../assets/sale.svg'
 import { formatter } from '../../uteis/formatterCurrency';
+import addIcon from "../../assets/addIcon.svg"
+import subIcon from "../../assets/subtractIcon.svg"
 
 
 
@@ -55,12 +57,12 @@ function Card(props) {
             {screen==="main" &&
           (  productInCart ?
                 <div className='btn-group'>
-                    <button onClick={() => reduceQuantityToProductOnCart(productInCart)}>-</button>
+                    <img onClick={() => reduceQuantityToProductOnCart(productInCart)} src={subIcon} alt="SubIcon" />
                     <p>{productInCart.quantity}</p>
-                    <button onClick={() => addQuantityToProductOnCart(productInCart)}>+</button>
+                    <img onClick={() => addQuantityToProductOnCart(productInCart)} src={addIcon} alt="addIcon" />
                 </div>
 
-                : <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
+                : <button className='add-cart' onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
 
            ) }
 

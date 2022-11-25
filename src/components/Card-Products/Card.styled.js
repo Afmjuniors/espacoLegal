@@ -74,18 +74,49 @@ h2{
 
 
 }
-button{
-    margin:8px 8px;
+.add-cart{
+    margin:16px 8px;
     border:none;
+    border-radius:8px;
+    cursor: pointer;;
+    
     height:20px;
     
    
+}
+.add-cart:hover{
+    filter:brightness(1.05);
+    border:1px lightgray solid;
 }
 
 .btn-group{
     display:flex;
     justify-content:center;
     align-items:center;
+    margin:16px 8px;
+
+   
+   
+
+    p{
+        padding: 0 8px;
+    }
+    img{
+        height:24px;
+        background-color:white;
+        border-radius:50%;
+
+    }
+    img:hover{
+        cursor: pointer;
+        filter:brightness(1.5);
+    }
+    img:active{
+        filter:brightness(0.95);
+    }
+
+
+
 
 }
 
