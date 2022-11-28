@@ -157,12 +157,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Login/SignUp forms
 - [x] Account Page
     - [x] Lastest orders
-    - [] User Data
+    - [x] User Data
     - [x] Credit Cards
       - [x] add new Card
       - [ ] remove card
-    -[x] favoreties
-    -[x]Logout  
+    - [x] favorites
+    - [x]Logout  
 
 
 See the [open issues](https://github.com/Afmjuniors/projeto-frontendreact/issues) for a full list of proposed features (and known issues).

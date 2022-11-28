@@ -1,4 +1,5 @@
-import {FooterContainer,
+import {
+    FooterContainer,
     DivParteCima,
     ImagemAstro,
     SobreContainer,
@@ -9,40 +10,30 @@ import {FooterContainer,
     EscritaBaixo,
 } from './Footer.styled'
 
- function Footer(){
-    return(
+function Footer() {
+    return (
         <FooterContainer>
-            <DivParteCima>
-                <ImagemAstro/>
-                <SobreContainer>
-                    <TituloSobre></TituloSobre>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                </SobreContainer>
-                <SobreContainer>
-                    <TituloSobre></TituloSobre>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                </SobreContainer>
-                <SobreContainer>
-                    <TituloSobre></TituloSobre>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                    <EscritaLink></EscritaLink>
-                </SobreContainer>
+          
+                <img src='' alt='Logo' />
+                <div>
+                    <h3>Espaço legal</h3>
+                    <h4>made by Alexandre Machdo</h4>
+                    <img src='' alt="Linkedin" />
+                    <img src='' alt="Github" />
+                    <img src='' alt="HackerRank" />
+                </div>
+                <div>
+                    <h3>Metodos de pagamento</h3>
+                    <img src='' alt='Cartado de credito'/>
+                    <img src='' alt='Boleto Bancario'/>
+                    <img src='' alt='Pix'/>
+                </div>
 
-            </DivParteCima>
-            <DivParteBaixo>
-                <EscritaBaixo></EscritaBaixo>
-                
-            </DivParteBaixo>
 
 
         </FooterContainer>
-        
-        
+
+
     )
 
 }
