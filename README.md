@@ -1,3 +1,237 @@
+<a name="readme-top"></a>
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO http://e-commerce-alexandre-machado.surge.sh/ -->
+<br />
+<div align="center">
+  <a href="https://github.com/Afmjuniors/projeto-frontendreact">
+    <img src="readme-image/logo-doc.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Espaço Legal</h3>
+
+  <p align="center">
+    An e-commerce of outterspace toys. 
+    <br />
+    <a href="https://github.com/Afmjuniors/projeto-frontendreact"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/Afmjuniors/projeto-frontendreact">View Demo</a>
+    ·
+    <a href="https://github.com/Afmjuniors/projeto-frontendreact/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Afmjuniors/projeto-frontendreact/issues">Request Feature</a>
+  </p>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#projeto-frontendreact">BootCamp´s task</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+A task of a simple e-commerce made by Labenus´s bootcamp was the start of my project. Now, it has a login/Sign uo section, a Cart, Itens, a page for filtering purpose, an user data page, and in any section at the botom-right section of the screen it will have a button, press it for more infoirmation on each section. 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+
+* [![React][React.js]][React-url]
+* [![Styled-components]][Styled-url]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Afmjuniors/projeto-frontendreact.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [X] Header
+    - [x] Search product by title / categories
+      - [ ] Using subsequence string as filter
+    - [x] Login/SignUp
+    - [x] Cart Page
+- [ ] Helper tab, instructions/info for each section of the page.
+- [x] Side Cart
+  - [x] subTotal os the cart
+  - [x] close purchase
+  - [x] add and reduce quantity of itens
+  - [x] go to cart page
+- [X] The Welcome Page
+    - [x] A top 4 product for the most bought
+    - [x] A top 4 product for the best rated
+    - [x] A top 4 product for biggest dicount
+- [x] Search for a product page
+    - [x] Filter by Price min and max
+    - [x] Filter by Categories
+    - [x] Sort by alphabetic order
+    - [x] Sort by price
+    - [x] Sort by discont
+    - [x] Sort by ratings
+- [x] Cart Page
+    - [x] Add and reduce quantity of a item
+    - [x] Remove all itens
+    - [x] Sum of all itens with and without discount
+    - [x] Sum of the saved value
+    - [x] Close cart
+- [x] Product Page
+    - [x] All infos of the product
+    - [x] add item to cart
+    - [x] add item to favorities
+- [ ] Login/SignUp forms
+- [x] Account Page
+    - [x] Lastest orders
+    - [] User Data
+    - [x] Credit Cards
+      - [x] add new Card
+      - [ ] remove card
+    -[x] favoreties
+    -[x]Logout  
+
+
+See the [open issues](https://github.com/Afmjuniors/projeto-frontendreact/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - afmjuniors@gmail.com
+
+Project Link: [https://github.com/Afmjuniors/projeto-frontendreact](https://github.com/Afmjuniors/projeto-frontendreact)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/Afmjuniors/projeto-frontendreact.svg?style=for-the-badge
+[contributors-url]: https://github.com/Afmjuniors/projeto-frontendreact/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Afmjuniors/projeto-frontendreact.svg?style=for-the-badge
+[forks-url]: https://github.com/Afmjuniors/projeto-frontendreact/network/members
+[stars-shield]: https://img.shields.io/github/stars/Afmjuniors/projeto-frontendreact.svg?style=for-the-badge
+[stars-url]: https://github.com/Afmjuniors/projeto-frontendreact/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Afmjuniors/projeto-frontendreact.svg?style=for-the-badge
+[issues-url]: https://github.com/Afmjuniors/projeto-frontendreact/issues
+[license-shield]: https://img.shields.io/github/license/Afmjuniors/projeto-frontendreact.svg?style=for-the-badge
+[license-url]: https://github.com/Afmjuniors/projeto-frontendreact/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/afmjuniors
+[product-screenshot]: readme-image/screenshot.jpg
+
+[Styled-components]:https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white
+[Styled-url]: https://www.styled-components.com/
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
+
+
+
 # projeto-frontendreact
 
 Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
