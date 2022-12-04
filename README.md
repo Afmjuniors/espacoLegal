@@ -99,7 +99,7 @@ password: 123456Ab
 
 ### Deploy
 surge: https://espaco-legal-alexandre-machado.surge.sh/ 
-
+best viewd in a desktop  screen from 1024x768 px to 1920x1080 px
 ### Prerequisites
 
 * npm
