@@ -20,7 +20,7 @@ function HomePgae (){
 <div>
 
     <div className="contaniners-destaques">
-        <h2>Produtos maiores promocoes</h2>
+        <h2>Produtos maiores promoções</h2>
    {arrayBestOff
    .map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
     
