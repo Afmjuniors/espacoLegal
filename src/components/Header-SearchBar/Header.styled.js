@@ -59,9 +59,29 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
    
    
 
+
    .cart{
-    width:50px;
-    margin-right:32px;
+      position:relative;
+      display:flex;
+
+      > img{
+
+         width:50px;
+         margin-right:32px;
+      }
+      > p{
+         right:50%;
+         display:flex;
+         justify-content:center;
+         align-items:center;
+         position:absolute;
+         color:black;
+         background-color:lightblue;
+         border-radius:50%;
+         width:16px;
+         height:16px;
+      }
+
  }
 
  .login{
@@ -83,15 +103,30 @@ box-shadow: 0px 4px 5px 0px rgba(24,36,97,0.43);
 
 
 
-
-
-
 `
 
-export const DatalistWrapper = styled.datalist`
-.opts{
-   color:red;
+export const DatalistWrapper = styled.div`
+
+datalist {
+  position: absolute;
+  max-height: 20em;
+  border: 0 none;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+datalist option {
+  font-size: 0.8em;
+  padding: 0.3em 1em;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+datalist option:hover, datalist option:focus {
+  color: #fff;
+  background-color: #036;
+  outline: 0 none;
+}
+
 
 
 `
