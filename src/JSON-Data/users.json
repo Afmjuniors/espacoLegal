@@ -18,7 +18,7 @@
             "city":"Belo Horizonte",
             "distric":"Luxemburgo",
             "street":"Some street ina city",
-            "cep":30380530,
+            "cep":30380000,
             "number":0,
             "complement":"ap 100"
 
@@ -47,7 +47,7 @@
         "creditCards":[{
             "choice": true,
             "validity":true,
-            "number":"1234 5678 9012 3456",
+            "number":"4234 5678 9012 3456",
             "brand":"Visa",
             "validityMounth":12,
             "validityYear":25,
@@ -56,5 +56,54 @@
             "cpf": "123.456.789-01"
         }],
         "favorites":["001","002"]
+    },
+    {
+        "userId":"CamilaCampolina",
+        "cpf":"012345678-10",
+        "username":"camila",
+        "firstName":"Camila",
+        "middleName":"Campolina",
+        "lastName":"Machado",
+        "genero":"feminino",
+        "dayBirth":2,
+        "mounthBirth":6,
+        "yearBirth":1984,
+        "email":"afmjuniors@gmail.com",
+        "password":"123456Ab",
+        "telefone":"31996828531",
+        "adress":{
+            "state":"MG",
+            "city":"Para de Minas",
+            "distric":"Seinão",
+            "street":"Some street ina city",
+            "cep":30000000,
+            "number":100,
+            "complement":""
+
+        },
+
+        "purchasesHistoric":[{
+            "id":"003",
+            "name": "Galáctico. Plano Abelha no Espaço Sideral",
+            "status":1,
+            "quantity":5,
+            "totalValue":120.20,
+            "paymentType":2,
+            "image":"./ProdutosImagens/livros-galactio.jpg",
+            "date":"06/10/2022"
+        }
+        ],
+        "creditCards":[{
+            "choice": true,
+            "validity":true,
+            "number":"5234 5678 9012 3456",
+            "brand":"Master Card",
+            "validityMounth":12,
+            "validityYear":26,
+            "cvc":123,
+            "name":"AlexandreCamila Machado",
+            "cpf": "123.456.789-01"
+        }],
+        "favorites":["004","006"]
     }
 ]

@@ -68,6 +68,8 @@ padding: 16px 0;
     .lixeira{
         height:20px;
         cursor: pointer;
+        padding-left:40%;
+       
     }
 
 `

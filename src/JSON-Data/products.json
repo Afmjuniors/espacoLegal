@@ -71,7 +71,7 @@
     },
     {
         "id": "003",
-        "avalible": true,
+        "avalible": false,
         "name": "Galáctico. Plano Abelha no Espaço Sideral",
         "evaluation": 5,
         "numberEvaluation": 1,
@@ -98,9 +98,7 @@
             "./ProdutosImagens/livros-galactio2.jpg"
         ],
         "altImage": "Galáctico. Plano Abelha no Espaço Sideral",
-        "brand": [
-            "Vale das Letras"
-        ],
+        "brand":"Vale das Letras",
         "categories": [
             "Livros",
             "Educacional"
@@ -135,9 +133,7 @@
             "./ProdutosImagens/brinquedos-conjunto-4peças-2.jpg"
         ],
         "altImage": "Conjunto Espaço Sideral",
-        "brand": [
-            "BBR"
-        ],
+        "brand":"BBR",
         "categories": [
             "Brinquedos",
             "Bonecos e Cenários",
@@ -179,9 +175,7 @@
             "./ProdutosImagens/brinquedos-banco-imobiliario-7.jpg"
         ],
         "altImage": "Banco Imobiliário Cósmico - 6 Jogadores",
-        "brand": [
-            "Brinquedos Estrela"
-        ],
+        "brand": "Brinquedos Estrela",
         "categories": [
             "Brinquedos",
             "Jogos e Acessórios",
@@ -223,9 +217,7 @@
             "./ProdutosImagens/brinquedos-quebra-cabeca-7.jpg"
         ],
         "altImage": "Brinquedos de quebra-cabeça de do solar",
-        "brand": [
-            "Xianers"
-        ],
+        "brand": "Xianers",
         "categories": [
             "Brinquedos",
             "Jogos e Acessórios",
@@ -265,9 +257,7 @@
             "./ProdutosImagens/roupas-pijama-4.jpg"
         ],
         "altImage": "Gorotos Conjunto de pijama Astronauta & Impressão de galáxia Ajuste confortável",
-        "brand": [
-            "Shien"
-        ],
+        "brand": "Shien",
         "categories": [
             "Roupas",
             "Pijama",
@@ -307,9 +297,7 @@
             "./ProdutosImagens/roupas-conjunto-bebe-6.jpg"
         ],
         "altImage": "Bebé Homem Botão/botão oculto Infantil Manga comprida Macacão",
-        "brand": [
-            "XMY Garment"
-        ],
+        "brand":"XMY Garment",
         "categories": [
             "Roupas",
             "Macacão",
@@ -349,9 +337,7 @@
             "./ProdutosImagens/roupas-astronauta-5.jpg"        
         ],
         "altImage": "Trajes de trajes de astronauta para crianças para traje espacial para saltos espaciais Vestido de Halloween",
-        "brand": [
-            "Langrui"
-        ],
+        "brand":"Langrui",
         "categories": [
             "Roupas",
             "Fantasia",

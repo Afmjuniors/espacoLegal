@@ -1,66 +1,78 @@
 import { DatalistWrapper, HeaderContainer } from './Header.styled'
 import logo from '../../assets/logo.png'
-import location from "../../assets/location.png"
+import locationIcon from "../../assets/location.png"
 import entrar from "../../assets/entrar.png"
 import carrinho from "../../assets/carrinho.png"
 import logOn from "../../assets/logon.png"
-import { useEffect, useState } from 'react'
-import { changeStringSearchStandard } from '../../uteis/searchStringStandard'
+import { useContext, useEffect, useState } from 'react'
+import { GlobalContext } from '../../contexts/GlobalContext'
+import { useLocation, useNavigate } from 'react-router-dom'
+import {goToHomePage, goToAcoountPage, goToSearchPage, goToCartPage, goToLoginPage} from "../../router/coordinator"
 
-function Header(props) {
+function Header() {
+    const context = useContext(GlobalContext)
     const {
+        currCart,
         inputName,
         setInputName,
-        productsNames,
-        screen,
-        setScreen,
         isLogOn,
-        setIslogOn
-    } = props
+        setIslogOn,
+        datalistArray,
+        productsNames
+    } = context
+const navigate = useNavigate()
+const location = useLocation()
 
 
+const user = JSON.parse(localStorage.getItem("user"))
+useEffect(()=>{
+
+
+    user &&
+    user.userId &&
+    setIslogOn(true)
+
+},[])
 
     
+    const handleChange = (e) =>{
+        setInputName(e.target.value)
+      if(location.pathname!=="/search")
+      {
+          goToSearchPage(navigate)
 
-    const userS = localStorage.getItem("user")
-    const user = (JSON.parse(userS))
-
-
-
-    useEffect(() => {
-      user &&
-            user.userId? setIslogOn(true) : setIslogOn(false)
-    
-    }, [user])
-
-  
-
-
-    const handleSendInput = (e) => {
-        if (e.key === "Enter") {
-            setScreen("main")
-        }
+      }
     }
 
     return (
         <HeaderContainer>
-            <img onClick={() => setScreen("welcome")} className='logo' src={logo} alt="logo Espaço Legal" />
+            <img onClick={() => goToHomePage(navigate)} className='logo' src={logo} alt="logo Espaço Legal" />
 
-            {(screen !== "login") &&
+            {(location.pathname !== "/login") &&
 
                 <div className='input-endereco'>
-                    <div>
-                        <img src={location} alt="icon location" />
-                        <p>Rua Dr. Juvenal dos Santos 270 - Belo Horizonte Minas Gerais</p>
-                    </div>
-                    <input type="text" value={inputName} onChange={(e)=>setInputName(e.target.value)} placeholder="Escrever aqui" list='products' onKeyDown={handleSendInput} />
-                    <DatalistWrapper onChange={handleSendInput} id="products"  >
+                 { user &&
+                 user.adress &&  <div>
+                        <img src={locationIcon} alt="icon location" />
+                        <p>Rua {user.adress.street} - {user.adress.city}-{user.adress.state} - CEP: {user.adress.cep}</p>
+                    </div>}
+                    <DatalistWrapper>
+
+                    <input 
+                    type="search"
+                    className='data' 
+                    value={inputName} 
+                    onChange={handleChange} 
+                    placeholder="Escrever aqui" 
+                    list='products'  />
+                    <datalist  id="products"  >
                         {
                             productsNames.map((productName) => {
                                 return <option className='opts' value={productName} key={productName} />
                             })
                         }
-                    </DatalistWrapper>
+                    </datalist>
+                </DatalistWrapper>
                        
 
                 </div>
@@ -68,19 +80,22 @@ function Header(props) {
             }
             <div className='icons'>
                 {
-                    screen !== "login" &&
+                    location.pathname !== "/login" &&
                     <div className='login'>
                         {
                             isLogOn ?
-                                <img onClick={() => setScreen("account")} src={logOn} alt="LogOn" />
-                                : <img onClick={() => setScreen("login")} src={entrar} alt="Login Sing up" />
+                                <img onClick={() => goToAcoountPage(navigate)} src={logOn} alt="LogOn" />
+                                : <img onClick={() => goToLoginPage(navigate)} src={entrar} alt="Login Sing up" />
                         }
-                        {isLogOn && <p>Olá, {user.firstName}</p>}
+                        {isLogOn && <p  onClick={() => goToAcoountPage(navigate)} >Olá, {user.firstName}</p>}
                     </div>
                 }
                 {
-                    screen !== "cart" &&
-                    <img onClick={() => setScreen("cart")} className='cart' src={carrinho} alt="Cart" />
+                    location.pathname !== "/cart" &&
+                    <div className='cart'>
+                    <img onClick={() => goToCartPage(navigate)} className='cartImg' src={carrinho} alt="Cart" />
+                     {currCart.length>0 && <p>{currCart.length}</p> }
+                    </div>
                 }
             </div>
 

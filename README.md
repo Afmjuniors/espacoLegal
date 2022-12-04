@@ -1,5 +1,11 @@
 <a name="readme-top"></a>
 
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -49,7 +55,6 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#projeto-frontendreact">BootCamp´s task</a></li>
   </ol>
 </details>
@@ -59,8 +64,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-A task of a simple e-commerce made by Labenus´s bootcamp was the start of my project. Now, it has a login/Sign uo section, a Cart, Itens, a page for filtering purpose, an user data page, and in any section at the botom-right section of the screen it will have a button, press it for more infoirmation on each section. 
+[![Product Name Screen Shot][product-screenshot]](https://espaco-legal-alexandre-machado.surge.sh/)
+A task of a simple e-commerce made by Labenus´s bootcamp was the start of my project. Now, it has a login/Sign uo section, a Cart, Itens, a page for filtering purpose, an user data page.<br>
+The desgin was loosely base design of various popular e-commerce such as amazon, riHappu and americanas.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -81,12 +87,21 @@ A task of a simple e-commerce made by Labenus´s bootcamp was the start of my pr
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+For a quick look around just open the deploed site. https://espaco-legal-alexandre-machado.surge.sh/<br>
+
+Username and password of users
+### User - Alexandre
+usename: afmjunior<br>
+password: 123456Ab
+### User - Camila
+username: camila<br>
+password: 123456Ab
+
+### Deploy
+surge: https://espaco-legal-alexandre-machado.surge.sh/ 
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
@@ -110,10 +125,15 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+With a mock data it is possible to experience an online shopping with all the basics uses of a normal e-commerce. It is possible to LogIn/SegnUp, view the user's registration data,
+add and remove items from a cart linked to said previously logged account.<br>
+Beware that the only manipulable database its the localStorage.<br> 
+There is no link with any API be it privileged or public accessible.<br>
+ <img src="readme-image/login.jpg" alt="Login" width="500" height="400">
+ <br>
+In the login page there is a button on the bottom left on your screen, hover over it to see available mock users.
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,10 +144,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [X] Header
     - [x] Search product by title / categories
-      - [ ] Using subsequence string as filter
     - [x] Login/SignUp
     - [x] Cart Page
-- [ ] Helper tab, instructions/info for each section of the page.
 - [x] Side Cart
   - [x] subTotal os the cart
   - [x] close purchase
@@ -154,13 +172,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [x] All infos of the product
     - [x] add item to cart
     - [x] add item to favorities
-- [ ] Login/SignUp forms
+- [x] Login/SignUp forms
+    - [x] Info icon with Username
+    - [x] SignUp form to create temporary user
 - [x] Account Page
     - [x] Lastest orders
     - [x] User Data
     - [x] Credit Cards
       - [x] add new Card
-      - [ ] remove card
+      - [x] remove card
     - [x] favorites
     - [x]Logout  
 
@@ -176,22 +196,13 @@ See the [open issues](https://github.com/Afmjuniors/projeto-frontendreact/issues
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - afmjuniors@gmail.com
+Alexandre Machado - https://linkedin.com/in/afmjuniors  - afmjuniors@gmail.com
 
 Project Link: [https://github.com/Afmjuniors/projeto-frontendreact](https://github.com/Afmjuniors/projeto-frontendreact)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -209,7 +220,7 @@ Project Link: [https://github.com/Afmjuniors/projeto-frontendreact](https://gith
 [license-url]: https://github.com/Afmjuniors/projeto-frontendreact/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/afmjuniors
-[product-screenshot]: readme-image/screenshot.jpg
+[product-screenshot]: readme-image/screenshot.gif
 
 [Styled-components]:https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white
 [Styled-url]: https://www.styled-components.com/
