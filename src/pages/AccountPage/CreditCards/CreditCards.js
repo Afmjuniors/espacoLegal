@@ -49,7 +49,8 @@ function CreditCards(props) {
             }
             <div className="cards-body">
 
-                {cards.map((creditCard) => {
+                {cards &&
+                cards.map((creditCard) => {
                     const lastFourS = String(creditCard.number).slice(-4)
                     const lastFour = Number(lastFourS)
                     return (

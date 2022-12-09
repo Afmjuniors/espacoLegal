@@ -15,8 +15,8 @@ const context = useContext(GlobalContext)
 const {handleClickProduct,
     handleFinalizarCompra,
     cartManipulation,
-    currCart,
-    setCurrCart} = context
+    } = context
+    const currCart = JSON.parse(localStorage.getItem("currCart"))
 
     let subTotal = (currCart.reduce((acc, product) => (product.quantity * product.priceDiscont + acc), 0)).toFixed(2)
     let priceFull = (currCart.reduce((acc, product) => (product.quantity * product.price + acc), 0)).toFixed(2)
@@ -25,7 +25,7 @@ const {handleClickProduct,
 
     const handleFinalizaCompraCart = () =>{
         currCart.length>0?
-        handleFinalizarCompra(): alert("Caarrinho Vazio")
+        handleFinalizarCompra(): alert("Carrinho Vazio")
     }
 
 
@@ -38,7 +38,7 @@ const {handleClickProduct,
 
                     <h1>Carrinho de compras</h1>
                     <div className="subtitle">
-                        <span onClick={()=>setCurrCart([])}><img src={deleteIcon} alt="delete icon" /> Remover todos</span>
+                        <span onClick={()=>localStorage.setItem("currCart",JSON.stringify([]))}><img src={deleteIcon} alt="delete icon" /> Remover todos</span>
                         <span>Preço</span>
 
                     </div>

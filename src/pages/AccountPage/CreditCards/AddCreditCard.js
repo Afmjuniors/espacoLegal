@@ -9,9 +9,9 @@ import { useEffect, useState } from "react"
 import { ConteinerNewCard } from "./CreditCard.styled"
 
 export function AddCreditCard(props) {
-    const { setPageFlow , setCard} = props
+    const { setPageFlow, setCard } = props
 
-    const [form , handleOnChangeForm] = useForm({ number: "", validityMounth: "", validityYear: "", cvc: "", name: "", cpf: "" })
+    const [form, handleOnChangeForm] = useForm({ number: "", validityMounth: "", validityYear: "", cvc: "", name: "", cpf: "" })
     const [image, setImage] = useState(neutro)
     const [brand, setBrand] = useState("")
 
@@ -23,41 +23,39 @@ export function AddCreditCard(props) {
 
     }, [form.number])
 
-    
+
 
     const handleClickAdicionar = (e) => {
         e.preventDefault()
-        
+
         const dateObj = new Date();
         const month = dateObj.getUTCMonth() + 1; //months from 1-12
         const year1 = dateObj.getUTCFullYear();
-        const year = year1%100;
+        const year = year1 % 100;
         let flag = false
         let flag2 = false
-        brand==="invalid"?flag2=false:flag2=true
-        form.validityYear > year? flag= true: form.validityMounth>=month? flag=true:flag = false
-        console.log(year);
-        if(flag && flag2)
-        {
+        brand === "invalid" ? flag2 = false : flag2 = true
+        form.validityYear > year ? flag = true : form.validityMounth >= month ? flag = true : flag = false
+        if (flag && flag2) {
             setPageFlow(2)
             const user = JSON.parse(localStorage.getItem("user"))
             const newCreditCard = {
                 choice: true,
-                validity:true,
-                ...form,   
-                brand:brand,
+                validity: true,
+                ...form,
+                brand: brand,
             }
             user.creditCards.push(newCreditCard)
             setCard(user.creditCards)
-            localStorage.setItem("user",JSON.stringify(user))
-           
+            localStorage.setItem("user", JSON.stringify(user))
 
-         
+
+
         }
-        else{
+        else {
             alert("dados invalidos, verifique a data de validade e se o cartao tem uma bandeira valida")
         }
-       
+
     }
 
     const handleSwicth = (number) => {
@@ -119,7 +117,7 @@ export function AddCreditCard(props) {
                     name="name"
                     onChange={handleOnChangeForm}
                     value={form.name} />
-                     <label>CPF do titular</label>
+                <label>CPF do titular</label>
                 <InputMask
                     type="text"
                     id="cpf"
@@ -127,7 +125,7 @@ export function AddCreditCard(props) {
                     name="cpf"
                     onChange={handleOnChangeForm}
                     value={form.cpf} />
-                    
+
                 <label>Validade</label>
 
                 <div className="data-card">

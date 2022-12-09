@@ -29,7 +29,8 @@ function CardPurchase(props) {
             <h1>Ultimos Pedidos</h1>
             <p>aqui esta seus ultimos pedidos</p>
 
-            {produtos.map((prod) => {
+            {produtos &&
+            produtos.map((prod) => {
           
                 return (
                     <ContainerCard  status={prod.status} key={prod.id}>

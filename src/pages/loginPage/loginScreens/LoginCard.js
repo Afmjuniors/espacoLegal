@@ -77,7 +77,7 @@ function FormLogin({setFormFlow}) {
                 </div>
             </div>
             <div className="form-data">
-                <label>Passwordd</label>
+                <label>Password</label>
                 <div className="input-data">
                     <img src={lockImg} alt="password Icon" />
 

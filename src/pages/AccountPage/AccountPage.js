@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import CreditCards from "./CreditCards/CreditCards"
 import CardPurchase from "./PurchaseSection/PurchaseSection"
 import { ContainerAcount } from "./AcountPage.styled"
@@ -26,7 +26,14 @@ function AccountPage() {
     } = context
     const navigate = useNavigate()
     const { sreen } = useParams()
-    const user = JSON.parse(localStorage.getItem("user"))
+    const user = JSON.parse(window.localStorage.getItem("user"))
+    const userS = window.localStorage.getItem("user")
+
+    useEffect(() => {
+        if (userS.length < 3) {
+            goToHomePage(navigate)
+        }
+    })
 
 
     const handleClickHistory = (id) => {
@@ -84,8 +91,8 @@ function AccountPage() {
         }
     ]
 
-    const handleExit = () =>{
-        localStorage.setItem('user',JSON.stringify({}))
+    const handleExit = () => {
+        localStorage.setItem('user', JSON.stringify({}))
         setIslogOn(false)
         goToHomePage(navigate)
 
@@ -102,12 +109,13 @@ function AccountPage() {
 
                     <section className="side-nav">
 
-                        {miniCards.map((card) => {
+                        {miniCards && 
+                        miniCards.map((card) => {
 
                             return (
 
 
-                                <div key={card.name} onClick={() => goToAcoountPage(navigate,card.param)} className="mini-card">
+                                <div key={card.name} onClick={() => goToAcoountPage(navigate, card.param)} className="mini-card">
                                     <img className="icon-image" src={card.image} alt="icon" />
                                     <div className="body-card">
                                         <h2 className="name">{card.name}</h2>

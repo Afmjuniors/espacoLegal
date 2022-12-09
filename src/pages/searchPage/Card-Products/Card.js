@@ -13,18 +13,11 @@ function Card({product}) {
 
     const context = useContext(GlobalContext)
     const {currCart,handleClickProduct,cartManipulation} = context
-
     const priceFormat = formatter.format(product.price)
     const priceOffFormat = formatter.format(product.price * (1 - (product.offPrice) / 100))
     const priceDiveded = formatter.format((product.price / 5))
 
-  
     const productInCart = currCart.find((productCard) => productCard.id === product.id)
-   
-
-
-
-
 
     return (
 

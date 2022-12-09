@@ -9,10 +9,11 @@ import { GlobalContext } from '../../contexts/GlobalContext'
 import { useLocation, useNavigate } from 'react-router-dom'
 import {goToHomePage, goToAcoountPage, goToSearchPage, goToCartPage, goToLoginPage} from "../../router/coordinator"
 
+
 function Header() {
     const context = useContext(GlobalContext)
     const {
-        currCart,
+        
         inputName,
         setInputName,
         isLogOn,
@@ -23,6 +24,7 @@ function Header() {
 const navigate = useNavigate()
 const location = useLocation()
 
+const currCart = JSON.parse(localStorage.getItem("currCart"))
 
 const user = JSON.parse(localStorage.getItem("user"))
 useEffect(()=>{
@@ -66,7 +68,7 @@ useEffect(()=>{
                     placeholder="Escrever aqui" 
                     list='products'  />
                     <datalist  id="products"  >
-                        {
+                        {productsNames &&
                             productsNames.map((productName) => {
                                 return <option className='opts' value={productName} key={productName} />
                             })

@@ -2,50 +2,53 @@
 import Layout from "../../components/Layout/Layout";
 import { ContainerWealcome } from "./Homepage.styled"
 import inauguracao from "../../assets/inauguraçao.svg"
-import {arrayBestOff ,arrayBestEvaluatiob ,arrayMostBougth } from "../../uteis/formatterCurrency"
+import { arrayBestOff, arrayBestEvaluatiob, arrayMostBougth } from "../../uteis/formatterCurrency"
 import { useContext } from "react"
 import { GlobalContext } from "../../contexts/GlobalContext"
 
-function HomePgae (){
+function HomePgae() {
     const context = useContext(GlobalContext)
-    const {handleClickProduct} =context
-    return(
- 
-       <Layout>
-       <ContainerWealcome>
+    const { handleClickProduct } = context
+    return (
 
-<img src={inauguracao} alt="Inauguração" />
+        <Layout>
+            <ContainerWealcome>
 
-
-<div>
-
-    <div className="contaniners-destaques">
-        <h2>Produtos maiores promoções</h2>
-   {arrayBestOff
-   .map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
-    
-    </div>
-
-    <div className="contaniners-destaques">
-        <h2>Produtos mais vendidos</h2>
-        {arrayMostBougth
-        .map((product) => <img  onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
-
-    
-    </div>
-    <div className="contaniners-destaques">
-        <h2>Produtos melhores avaliados</h2>
-        {arrayBestEvaluatiob
-        .map((product) => <img onClick={()=>handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} /> )               }
+                <img src={inauguracao} alt="Inauguração" />
 
 
-    </div>
-</div>
+                <div>
 
-</ContainerWealcome>
+                    <div className="contaniners-destaques">
+                        <h2>Produtos maiores promoções</h2>
+                        {arrayBestOff &&
+                            arrayBestOff
+                                .map((product) => <img onClick={() => handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} />)}
 
-       </Layout>
-     
+                    </div>
+
+                    <div className="contaniners-destaques">
+                        <h2>Produtos mais vendidos</h2>
+                        {arrayMostBougth &&
+                            arrayMostBougth
+                                .map((product) => <img onClick={() => handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} />)}
+
+
+                    </div>
+                    <div className="contaniners-destaques">
+                        <h2>Produtos melhores avaliados</h2>
+                        {arrayBestEvaluatiob &&
+                            arrayBestEvaluatiob
+                                .map((product) => <img onClick={() => handleClickProduct(product)} key={product.id} src={product.image[0]} alt={product.altImage} />)}
+
+
+                    </div>
+                </div>
+
+            </ContainerWealcome>
+
+        </Layout>
+
 
     )
 }
