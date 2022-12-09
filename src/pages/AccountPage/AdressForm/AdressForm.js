@@ -7,19 +7,21 @@ import useForm from "../../../hooks/useForm"
 export default function AdressForm () {
     const context = useContext(GlobalContext)
     const user = JSON.parse(localStorage.getItem("user"))
+ 
     const [form , handleChangeForm] = useForm({
-        password:user.password,
-        email:user.email,
-        telefone:user.telefone,
-        cep:user.adress.cep,
-        estado:user.adress.state,
-        street:user.adress.street,
-        number:user.adress.number,
-        complement:user.adress.complement,  
-        city:user.adress.city,
-        bairro:user.adress.district
+        password:"",
+        email:"",
+        telefone:"",
+        cep:"",
+        estado:"",
+        street:"",
+        number:"",
+        complement:"",  
+        city:"",
+        bairro:"",
     
     })
+
 
 
 const name = `${user.firstName} ${user.middleName} ${user.lastName}`
@@ -39,17 +41,17 @@ const name = `${user.firstName} ${user.middleName} ${user.lastName}`
                     <label>*senha</label>
                     <div>
                         <input 
-                        value={form.email}
+                        value={user.email}
                         name="email"
-                         onChange={handleChangeForm} type="email" placeholder="email" />
+                          type="email" placeholder="email" />
                         <span>alterar</span>
                     </div>
                     <label>*senha</label>
                     <div>
                         <input 
-                        value={form.password}
+                        value={user.password}
                         name="password"
-                         onChange={handleChangeForm} type="password" placeholder="***********" />
+                         type="password" placeholder="***********" />
                         <span>alterar</span>
                     </div>
                 </div>
@@ -75,9 +77,9 @@ const name = `${user.firstName} ${user.middleName} ${user.lastName}`
                     <label>*telefone</label>
                     <div>
                         <input
-                         value={form.telefone} 
+                         value={user.telefone} 
                          name="telefone"
-                         onChange={handleChangeForm} className="inputNumber" type="number" placeholder="(31)996828531" /><span>alterar</span>
+                        className="inputNumber" type="number" placeholder="(31)996828531" /><span>alterar</span>
                     </div>
 
                 </div>
@@ -89,49 +91,49 @@ const name = `${user.firstName} ${user.middleName} ${user.lastName}`
                         <div>
 
                             <label>*CEP</label>
-                            <input value={form.cep} 
+                            <input value={user.cep} 
                             name="cep"
-                            onChange={handleChangeForm} className="inputNumber" type="number" placeholder="30000-000" />
+                            className="inputNumber" type="number" placeholder="30000-000" />
                         </div>
                         <div>
 
                             <label>*rua</label>
-                            <input value={form.street} 
+                            <input value={user.street} 
                             name="street"
-                            onChange={handleChangeForm} type="text" placeholder="algum lugar na cidade" />
+                           type="text" placeholder="algum lugar na cidade" />
                         </div>
                         <div className="numero-input">
                             <div>
                                 <label>*numero</label>
-                                <input value={form.number}
+                                <input value={user.number}
                                 name="number"
-                                onChange={handleChangeForm} className="number-endereco" type="number" placeholder="0" />
+                               className="number-endereco" type="number" placeholder="0" />
                             </div>
                             <div>
                                 <label>complemento</label>
-                                <input value={form.complement}
+                                <input value={user.complement}
                                 name="complement"
-                                onChange={handleChangeForm} type="text" placeholder="apto 100" />
+                              type="text" placeholder="apto 100" />
                             </div>
                         </div>
                         <div>
 
                             <label>*bairro</label>
-                            <input value={form.bairro}
+                            <input value={user.bairro}
                             name="bairro" 
-                            onChange={handleChangeForm}  type="text" placeholder="Centro" />
+                           type="text" placeholder="Centro" />
                         </div>
                         <div className="cidade-estado">
 
                             <label>*Cidade</label>
-                            <input value={form.city}
+                            <input value={user.city}
                             name="city"
-                            onChange={handleChangeForm} type="text" placeholder="Belo Horizonte" />
+                           type="text" placeholder="Belo Horizonte" />
                             <div className="select-estado">
                                 <label>*Estado</label>
-                                <select value={form.estado} 
+                                <select value={user.estado} 
                                 name="estado"
-                                onChange={handleChangeForm}>
+                               >
                                     <option>Selecione</option>
                                     {estados &&
                                     estados.map((estado) => <option key={estado} value={estado}>{estado}</option>)}

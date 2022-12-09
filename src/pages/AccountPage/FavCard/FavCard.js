@@ -10,7 +10,7 @@ function FavCard({ favorites }) {
         handleClickProduct,
     } = context
 
-    const newCardsFav = products.filter((prod) => favorites.includes(prod.id))
+    const newCardsFav = products.filter((prod) => favorites && favorites.includes(prod.id))
     return (
         <ConateinerFavBody>
             {newCardsFav &&
