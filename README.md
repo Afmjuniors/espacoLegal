@@ -25,7 +25,7 @@
     <a href="https://github.com/Afmjuniors/projeto-frontendreact"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Afmjuniors/projeto-frontendreact">View Demo</a>
+    <a href="https://espaco-legal-alexandre-machado.surge.sh/">View Demo</a>
     ·
     <a href="https://github.com/Afmjuniors/projeto-frontendreact/issues">Report Bug</a>
     ·

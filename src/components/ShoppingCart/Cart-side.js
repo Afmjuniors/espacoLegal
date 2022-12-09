@@ -45,7 +45,8 @@ function CartSide() {
                
             </div>
             <hr />
-            {currCart
+            {currCart &&
+            currCart
                 .map((product) => {
                     
 

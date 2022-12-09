@@ -133,7 +133,8 @@ const name = `${user.firstName} ${user.middleName} ${user.lastName}`
                                 name="estado"
                                 onChange={handleChangeForm}>
                                     <option>Selecione</option>
-                                    {estados.map((estado) => <option key={estado} value={estado}>{estado}</option>)}
+                                    {estados &&
+                                    estados.map((estado) => <option key={estado} value={estado}>{estado}</option>)}
                                 </select>
                             </div>
                         </div>

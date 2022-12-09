@@ -2,6 +2,7 @@ import { GlobalContext } from './contexts/GlobalContext'
 import Router from './router/Router'
 import GlobalState from './GlobalState'
 import { useEffect } from 'react'
+import img from "../src/"
 
 
 function App() {
